@@ -1,0 +1,56 @@
+spectra:
+  use_spectra: ["tt", "te", "ee"]
+  lmax_win: 7925
+  
+  cross_spectra: 
+    tt: ["98x98","98x150","150x150"]
+    te: ["98x98","98x150","150x98","150x150"]
+    ee: ["98x98","98x150","150x150"]
+
+foregrounds:
+  foreground_template: Data/
+
+  normalisation:
+    nu_0: 150.0
+    ell_0: 3000
+    T_CMB: 2.725
+
+  frequencies: 
+    nominal: [98, 150]
+    fdust: [98.8, 151.2]
+    fsz: [98.4, 150.1]
+    fsyn: [95.8, 147.2]
+
+  components:
+    tt:
+      - kSZ
+      - cibp
+      - radio
+      - tSZ
+      - cibc
+      - tSZxcib
+      - dust
+    te: 
+      - radio
+      - dust
+    ee: 
+      - radio
+      - dust
+
+params:
+  a_tSZ: 5.29
+  a_kSZ: 1.6
+  xi: 0.09
+  a_p: 6.58
+  a_c: 3.15
+  beta_p: 2.87
+  a_s: 22.5
+  a_g: 8.7
+  a_gte: 0.3
+  a_gee: 0.13
+  a_pste: 0.04
+  a_psee: 0.03
+  T_d: 9.7
+  T_dd: 19.6
+  n_CIBC: 1.2
+
